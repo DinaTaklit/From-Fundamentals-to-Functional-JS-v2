@@ -13,6 +13,17 @@
 
 > Why we use Dot then since we can use brackets for everything? =>  To save time.
 
+### Destructuring
+
+- it just makes getting values out of objects and arrays, have less typing.
+- Variables Declarations (the patern used here called decoration patern):
+  - const {first, second} = {first: 0, second:1}
+  - let {first, second} = {first: 0, second:1}
+  - var {first, second} = {first: 0, second:1}
+- Assignement:
+  - {first, second} = {first: 0, second:1}
+- Chek more in objects/destructuring
+
 ## Credits
 
 All credits goes for From Fundamentals to Functional JS, v2 front end master course
