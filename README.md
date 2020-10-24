@@ -114,6 +114,11 @@ _.each(suspectsList, function(suspect){
 - Filter is a function that takes an array in a callback. And it is going to return a new array, that only contains the values that return true from the callback. Callback have to return a bolean true of false. If the value is true then save it in the array.
 - Once we implement `_.filter` function we should use `_.each` not `_.map` function coz _.map will return an array of same size and this is not waht we want.
 
+## Functions In-Depth
+
+### Anatomy of a Function
+![Anatomy of function](assets/../assets/img/6.FunctionsAnatomy.png)
+
 ## Credits
 
 All credits goes for From Fundamentals to Functional JS, v2 front end master course
