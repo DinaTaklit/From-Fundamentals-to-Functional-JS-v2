@@ -24,7 +24,50 @@
   - {first, second} = {first: 0, second:1}
 - Chek more in objects/destructuring
 
-### List Transformation
+## List Transformation
+
+- check the List Transformation folder
+
+## forEach() function
+
+### _.each() / forEach DEFINED
+
+- Iterates over a **list** of elements, passing the values to a function.
+- Each invocation of **iterator**, the function, is called with three arguments: (element, index, list). If **list** is a JavaScript object, **iterator**'s arguments will be (value, key, list).
+- `_.each` works for both arrays and objects.
+- If we have a variable we should use brackert notation for objects instead of dot notation
+
+```javascript
+_.each(
+    ['observatory','ballroom', 'library'],
+    function(value, index, list){ ... }
+);
+['observatory','ballroom','library']
+.forEach(function(value, index, list){...});
+```
+
+```javascript
+function CreateSuspectObjects(name){
+  return{
+    name: name,
+    color: name.split(' ')[1],
+    speak(){log(`my name is ${name}`);}
+  };
+}
+
+var suspects = ['Miss Scarlet', 'Colonel Mustard', 'Mr. White'];
+
+var suspectsList = [];
+_.each(suspects, function(name){
+  suspectsList.push(CreateSuspectObjects(name));
+});
+```
+
+```javascript
+_.each = function(list, callback){
+    // ... TODO
+}
+```
 
 ## Credits
 
