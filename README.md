@@ -6,6 +6,10 @@
 - Learn higher-order functions, closures, scope and the fundamentals necessary to use modern frameworks like React, Angular and Vue.
 - Master key functional methods like map, reduce and filter ...plus promises and ES6+ asynchronous JavaScript!
 
+- **Slides links**:
+  - https://slides.com/bgando/f2f-final-day-1
+  - https://slides.com/bgando/f2f-final-day-2
+
 ## Objects
 
 - We use Dot notation for only strings.
