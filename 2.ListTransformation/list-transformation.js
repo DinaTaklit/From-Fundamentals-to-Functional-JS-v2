@@ -35,3 +35,18 @@ let gameLoop = function(game){
     }
 }
 gameLoop(game);
+
+// Destructure this nested data structure into two variables with the strings 'red' and 'orange'
+
+let [red, orange] = [game.suspects[0].color, game.suspects[1].color];
+let [{color: firstcolor}, {color: secondcolor}] = game.suspects;
+
+
+// for (let {color} of game.suspects){
+//     console.log(' color: ', color);
+// }
+
+// var colors = game.suspects.map (({color}) => color);
+// console.log(colors);
+
+
