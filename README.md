@@ -69,6 +69,42 @@ _.each = function(list, callback){
 }
 ```
 
+## .map() Function
+
+- The main diff between map and foreach is that the foreach function does not return anything wherease map always return a new array.
+
+### _.map() / .map() DEFINED
+
+```javascript
+_.map() / .map() DEFINED .map([1,2,3]
+```
+
+- http://underscorejs.org/#map
+- Produces a new array of values by mapping each value in **list** through a transformation function (**iterator**).
+- Each invocation of **iterator** is called with three arguments: (element, index, list). If **list** is a JavaScript object, **iterator**'s arguments will be (value, key, list)
+
+### _.map vs _.each
+
+```javascript
+function CreateSUspectObjects(name){
+    return {
+        name: name,
+        color: name.split(' ')[1],
+        speack() {log(`my name is ${this.name}`);}
+    };
+}
+var suspects = ['Miss Scarlet', 'Colonel Mustard'];
+// _map function
+var suspectsList = _.map(suspects, function(name){
+    return CreateSUspectObjects(name);
+});
+
+//  _each function
+_.each(suspectsList, function(suspect){
+    suspects.speak();
+});
+```
+
 ## Credits
 
 All credits goes for From Fundamentals to Functional JS, v2 front end master course
