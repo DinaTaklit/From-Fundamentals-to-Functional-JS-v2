@@ -28,9 +28,9 @@
 
 - check the List Transformation folder
 
-## forEach() function
+## `forEach()` function
 
-### _.each() / forEach DEFINED
+### `_.each()` / `forEach` DEFINED
 
 - Iterates over a **list** of elements, passing the values to a function.
 - Each invocation of **iterator**, the function, is called with three arguments: (element, index, list). If **list** is a JavaScript object, **iterator**'s arguments will be (value, key, list).
@@ -69,11 +69,11 @@ _.each = function(list, callback){
 }
 ```
 
-## .map() Function
+## `.map()` Function
 
 - The main diff between map and foreach is that the foreach function does not return anything wherease map always return a new array.
 
-### _.map() / .map() DEFINED
+### `_.map()` / `.map()` DEFINED
 
 ```javascript
 _.map() / .map() DEFINED .map([1,2,3]
@@ -83,7 +83,7 @@ _.map() / .map() DEFINED .map([1,2,3]
 - Produces a new array of values by mapping each value in **list** through a transformation function (**iterator**).
 - Each invocation of **iterator** is called with three arguments: (element, index, list). If **list** is a JavaScript object, **iterator**'s arguments will be (value, key, list)
 
-### _.map vs _.each
+### `_.map` vs `_.each`
 
 ```javascript
 function CreateSUspectObjects(name){
@@ -104,6 +104,11 @@ _.each(suspectsList, function(suspect){
     suspects.speak();
 });
 ```
+
+## `.filter()` Function
+
+- Filter is a function that takes an array in a callback. And it is going to return a new array, that only contains the values that return true from the callback. Callback have to return a bolean true of false. If the value is true then save it in the array.
+- Once we implement `_.filter` function we should use `_.each` not `_.map` function coz _.map will return an array of same size and this is not waht we want.
 
 ## Credits
 
