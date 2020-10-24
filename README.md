@@ -141,6 +141,10 @@ $('button').on('click', () => {
 
 ```
 
+### Projecting
+
+- The projecting is once you take a value out of a data structure and turn it into another data structure
+
 ## Credits
 
 All credits goes for From Fundamentals to Functional JS, v2 front end master course
