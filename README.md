@@ -24,6 +24,8 @@
   - {first, second} = {first: 0, second:1}
 - Chek more in objects/destructuring
 
+### List Transformation
+
 ## Credits
 
 All credits goes for From Fundamentals to Functional JS, v2 front end master course
