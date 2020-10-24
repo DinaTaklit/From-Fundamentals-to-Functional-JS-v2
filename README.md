@@ -124,6 +124,23 @@ _.each(suspectsList, function(suspect){
 
 > console.log is side effect because you are logging to the console that exists outside of that function, that is side effect. Or if you're changin the value of an object that's in a different scope.
 
+### Arrow Functions
+
+```javascript
+var nameImprover = (name, adj) => {
+  return `Col ${name} Mc ${adj} pants`;
+};
+
+$('body').hide();
+
+myArr.forEach(val => console.log(val));
+
+$('button').on('click', () => { 
+  console.log('Don\'t press my buttons!');
+});
+
+```
+
 ## Credits
 
 All credits goes for From Fundamentals to Functional JS, v2 front end master course
