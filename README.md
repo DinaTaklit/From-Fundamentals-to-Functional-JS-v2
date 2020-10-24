@@ -119,6 +119,11 @@ _.each(suspectsList, function(suspect){
 ### Anatomy of a Function
 ![Anatomy of function](assets/../assets/img/6.FunctionsAnatomy.png)
 
+- **return** values are anything that is explicity returned, in this case an ES5 at least, it is explicitly returned with a return statement.
+- **side effects** are things that are happening other than returning the value that effects something outside of that function.
+
+> console.log is side effect because you are logging to the console that exists outside of that function, that is side effect. Or if you're changin the value of an object that's in a different scope.
+
 ## Credits
 
 All credits goes for From Fundamentals to Functional JS, v2 front end master course
