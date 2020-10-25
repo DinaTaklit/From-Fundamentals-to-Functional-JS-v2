@@ -10,7 +10,7 @@
   - https://slides.com/bgando/f2f-final-day-1
   - https://slides.com/bgando/f2f-final-day-2
 
-## Objects
+## 1.Objects
 
 - We use Dot notation for only strings.
 - We use brackets for: string, numbers, variables, weird characters, expressions.
@@ -28,11 +28,11 @@
   - {first, second} = {first: 0, second:1}
 - Chek more in objects/destructuring
 
-## List Transformation
+## 2.List Transformation
 
 - check the List Transformation folder
 
-## `forEach()` function
+## 3.`forEach()` function
 
 ### `_.each()` / `forEach` DEFINED
 
@@ -73,7 +73,7 @@ _.each = function(list, callback){
 }
 ```
 
-## `.map()` Function
+## 4.`.map()` Function
 
 - The main diff between map and foreach is that the foreach function does not return anything wherease map always return a new array.
 
@@ -109,12 +109,12 @@ _.each(suspectsList, function(suspect){
 });
 ```
 
-## `.filter()` Function
+## 5.`.filter()` Function
 
 - Filter is a function that takes an array in a callback. And it is going to return a new array, that only contains the values that return true from the callback. Callback have to return a bolean true of false. If the value is true then save it in the array.
 - Once we implement `_.filter` function we should use `_.each` not `_.map` function coz _.map will return an array of same size and this is not waht we want.
 
-## Functions In-Depth
+## 6.Functions In-Depth
 
 ### Anatomy of a Function
 ![Anatomy of function](assets/../assets/img/6.FunctionsAnatomy.png)
@@ -233,7 +233,7 @@ constructArr('was', 'it', 'in');
 
 ### P.S. FUNCTIONS ARE OBJECTS
 
-> Remember that functions are also objects, and you can add properties to them, so when you see functions like `.call` and things like that, that is because functions are also objects.
+> Remember that functions are also objects, and you can add properties to them, so when you see functions like `.call` and things like that, that is because functions are also objects. So `.prototype` and things like that, those are just properties on this object, a special kind of objet that's a function.
 
 ```javascript
 const add = function(a, b){
@@ -241,6 +241,14 @@ const add = function(a, b){
 };
 add.example = 'testing 123!';
 ```
+
+## 7.Scope
+
+- Local
+- Global
+- Nested Scopes
+- Precedence
+- Block Scope
 
 ## Credits
 
