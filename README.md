@@ -250,6 +250,75 @@ add.example = 'testing 123!';
 - Precedence
 - Block Scope
 
+## 8.HIGHER-ORDER FUNCTIONS AND CALLBACKS
+
+- Higher order function in JavaScript is what enables us to do these functional programming techniques. Because a functtion in JavaScript is data. And that's not true in all languages that this function can be data. What we mean by saying function is data is that we can pass functions arround. We can return them without invoking them and things like that. Just like you would an object, or say some primitive value, like 0 or true. So, really higher order functions and callbacks are the core concept of functional programming.
+
+1. Takes a function as an input (argument)
+
+  ```javascript
+  element.addEventListener("change",() => {
+
+  console.log("Our evidence is updated");
+
+  });
+    ```
+
+2. Returns a function as the output
+
+  ```javascript
+  const newClue = (name) => {
+  const length = name.length;
+
+  return (weapon) => {
+    let clue = length + weapon.length;
+    return !!(clue % 1);
+  };
+
+  };
+  ```
+
+### CALLBACKS
+
+- If condition is true do isTrue(), otherways do isFalse();
+
+```javascript
+// Here it will return the whole function coz isTrue is not invoked.
+const ifElse = (condition, isTrue, isFalse) => {
+  return condition ? isTrue : isFalse;
+};
+
+ifElse(true,
+ () => { console.log(true);},
+ () => { console.log(false);}
+);
+```
+
+```javascript
+// Here console.log() will be executed since the function isTrue is invoked.
+const ifElse = (condition, isTrue, isFalse) => {
+  return condition ? isTrue() : isFalse();
+};
+
+ifElse(true,
+ () => { console.log(true);},
+ () => { console.log(false);}
+);
+```
+
+```javascript
+// Another ways to write things
+const ifElse = (condition, isTrue, isFalse) => {
+  return condition ? isTrue() : isFalse();
+};
+
+
+const logTrue = () => {console.log(true);};
+const logFalse = () => {console.log(false);};
+
+ifElse(true, logTrue, logFalse);
+```
+
 ## Credits
 
 All credits goes for From Fundamentals to Functional JS, v2 front end master course
