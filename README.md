@@ -176,7 +176,7 @@ createTuple('It', 'be', 'could', 'anyone', 'no one');
 ```javascript
 const createTuple = (a, b, c, d) => {
   console.log(arguments);
-    //['It', 'be', 'could', 'anyone']
+    //['It', 'be', 'could', 'anyone','no one']
   return [[a, c],[ b, d]];
 }
 
@@ -223,11 +223,23 @@ constructArr('was', 'it', 'in');
 
 ```javascript
 const constructArr = function() {
+  debugger;
   const arr = Array.from(arguments); // turning arguments array-like onject into an array using Array.from method
   arr.push('the billiards room?');
   return arr.join(' ');
 };
 constructArr('was', 'it', 'in');
+```
+
+### P.S. FUNCTIONS ARE OBJECTS
+
+> Remember that functions are also objects, and you can add properties to them, so when you see functions like `.call` and things like that, that is because functions are also objects.
+
+```javascript
+const add = function(a, b){
+  return a + b;
+};
+add.example = 'testing 123!';
 ```
 
 ## Credits
