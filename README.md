@@ -167,6 +167,31 @@ createTuple('It', 'be', 'could', 'anyone', 'no one');
 // => [ [ 'It', 'could' ], [ 'be', [ 'anyone', 'no one' ] ] ]
 ```
 
+### Arguments Keyword
+
+- The arguments keyword refrences all the arguments as a **pseudo array**.
+- A psudeo array is an onkect that looks like an array, but it's actually an object.
+- What does that mean? That means that we do not have access to out handy array mehtods lie push, pop, forEach, splice and stuff like that.
+
+```javascript
+const createTuple = (a, b, c, d) => {
+  console.log(arguments);
+    //['It', 'be', 'could', 'anyone', 'no one']
+  return [[a, c],[ b, d]];
+}
+
+createTuple('It', 'be', 'could', 'anyone', 'no one');
+```
+
+```javascript
+const createTuple = function(a, b, c, ...d) {
+  console.log(arguments);
+    //['It', 'be', 'could', 'anyone', 'no one']
+  return [[a, c],[ b, d]];
+}
+
+createTuple('It', 'be', 'could', 'anyone', 'no one'); 
+```
 
 ## Credits
 
