@@ -219,6 +219,17 @@ const constructArr = function() {
 constructArr('was', 'it', 'in');
 ```
 
+### ARRAY-LIKE OBJECT ES6 version using Array.form method
+
+```javascript
+const constructArr = function() {
+  const arr = Array.from(arguments); // turning arguments array-like onject into an array using Array.from method
+  arr.push('the billiards room?');
+  return arr.join(' ');
+};
+constructArr('was', 'it', 'in');
+```
+
 ## Credits
 
 All credits goes for From Fundamentals to Functional JS, v2 front end master course
