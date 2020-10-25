@@ -145,6 +145,29 @@ $('button').on('click', () => {
 
 - The projecting is once you take a value out of a data structure and turn it into another data structure
 
+### Spread Operator
+
+```javascript
+const createTuple = (a, b, c, d) => {
+  return [[a, c],[ b, d]];
+}
+
+createTuple('It', 'be', 'could', 'anyone', 'no one');
+// => [['it', 'could'], ['be', 'anyone']]
+```
+
+- with spread operator
+
+```javascript
+const createTuple = (a, b, c, ...d) => {
+  return [[a, c],[ b, d]];
+}
+
+createTuple('It', 'be', 'could', 'anyone', 'no one'); 
+// => [ [ 'It', 'could' ], [ 'be', [ 'anyone', 'no one' ] ] ]
+```
+
+
 ## Credits
 
 All credits goes for From Fundamentals to Functional JS, v2 front end master course
