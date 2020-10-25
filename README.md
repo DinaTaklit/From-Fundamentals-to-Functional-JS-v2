@@ -208,6 +208,17 @@ add(3);
 > Something to put in mide is that the argument's keyword is only paying attention to the explicit values being passed into the function,
 > and if there is something like default value or a spread operator, it is not going to be a saved by arguments keyword.
 
+### ARRAY-LIKE OBJECT
+
+```javascript
+const constructArr = function() {
+  const arr = Array.prototype.slice.call(arguments); // create and array from an array-like object
+  arr.push('the billiards room?'); // push new entery the array
+  return arr.join(' '); // join everything in the array separated with space
+};
+constructArr('was', 'it', 'in');
+```
+
 ## Credits
 
 All credits goes for From Fundamentals to Functional JS, v2 front end master course
