@@ -176,7 +176,7 @@ createTuple('It', 'be', 'could', 'anyone', 'no one');
 ```javascript
 const createTuple = (a, b, c, d) => {
   console.log(arguments);
-    //['It', 'be', 'could', 'anyone', 'no one']
+    //['It', 'be', 'could', 'anyone']
   return [[a, c],[ b, d]];
 }
 
@@ -190,8 +190,23 @@ const createTuple = function(a, b, c, ...d) {
   return [[a, c],[ b, d]];
 }
 
-createTuple('It', 'be', 'could', 'anyone', 'no one'); 
+createTuple('It', 'be', 'could', 'anyone', 'no one');
 ```
+
+### Default parameters
+
+```javascript
+const add = function(a , b = 2) {
+   console.log(arguments); //logs [3]
+   return a + b;
+};
+add(3);
+```
+
+- Once `add(3)` be invoked console arguments it is only gonna console out 3 for the arguments, in this case where we did not pass two arguments.
+
+> Something to put in mide is that the argument's keyword is only paying attention to the explicit values being passed into the function,
+> and if there is something like default value or a spread operator, it is not going to be a saved by arguments keyword.
 
 ## Credits
 
