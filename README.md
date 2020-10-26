@@ -388,6 +388,26 @@ curried(1, 2)(3);
 // => [1, 2, 3]
 ```
 
+#### Composing
+
+- Composing is when you take two functions and combine them essentially.
+
+```javascript
+const consider = (name) => {
+  return `I think it could be... ${name}`;
+};
+
+const exclaim  = (statement) => {
+  return `${statement.toUpperCase()}!`;
+};
+
+const blame = _.compose(consider, exclaim); // it will compose exlaim under consider, so the order does matter
+
+blame('you');
+
+=> 'I think it could be... YOU!'
+```
+
 ## Credits
 
 All credits goes for From Fundamentals to Functional JS, v2 front end master course
