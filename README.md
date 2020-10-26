@@ -364,6 +364,30 @@ const ifElse = (condition, isTrue, isFalse) => {
 const logTrue = (msgs) => { console.log(msgs); };
 ```
 
+### Functional Utilities
+
+#### Currying
+
+- Currying is when you create a function that later be called multiple times with differet arguments.
+- It allows you to break up arguments passed by the number of arguments.
+
+```javascript
+// Curry function allows you to call a function up to 03 times with 03 different values.
+_.curry(func, [arity=func.length])
+
+// This function expects 03 arguments in order for it to return a value.
+var abc = function(a, b, c) {
+  return [a, b, c];
+};
+
+var curried = _.curry(abc);
+curried(1)(2)(3);
+// => [1, 2, 3]
+
+curried(1, 2)(3);
+// => [1, 2, 3]
+```
+
 ## Credits
 
 All credits goes for From Fundamentals to Functional JS, v2 front end master course
