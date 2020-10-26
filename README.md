@@ -434,6 +434,32 @@ const myAlert = () => {
 };
 ```
 
+- `funcAlert` This will create a new scope for alerter but the parent scope will remane asame for each exec.
+- `funcAlert`, `funcAlert2`: it is retaining a memory of its parent's scope, but it is different than this other function's parent scope, and that's really important concept to remember, because it's kind of the core of how everything sort of fits together in Script.
+
+```javascript
+const myAlert = () => {
+  const x = "Help! I think I found a clue!";
+  let count = 0;
+  const alerter = (){
+    alert(`${x} ${++count}`);
+  };
+
+  return alerter;
+};
+
+const funcAlert = myAlert();
+  // () =>{
+  //   alert(`${x} ${++count}`);
+  // };
+const funcAlert2 = myAlert();
+
+funcAlert(); // count = 1
+funcAlert(); // count = 2
+
+funcAlert2 (); // count =1
+```
+
 ## Credits
 
 All credits goes for From Fundamentals to Functional JS, v2 front end master course
