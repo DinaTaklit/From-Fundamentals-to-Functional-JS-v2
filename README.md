@@ -333,6 +333,37 @@ doMathSoIDontHaveTo(5, square); //25
 doMathSoIDontHaveTo(4, increment); //5
 ```
 
+### 8.HIGHER-ORDER FUNCTIONS AND CALLBACKS => PASSING ARGUMENTS
+
+```javascript
+//How do we pass arguments?
+const ifElse = (condition, isTrue, isFalse, parameter) => {
+  return condition ? isTrue(parameter) : isFalse(parameter);
+};
+ifElse(true, fn1, fn2, 'HI');
+```
+
+```javascript
+const ifElse = (condition, isTrue, isFalse, ...args) => {
+  console.log(args) //['HI', 'BYE', 'HOLA']
+  return condition ? isTrue(...args) : isFalse(...args);
+  isTrue('HI', 'BYE', 'HOLA')
+};
+ifElse(true, fn1, fn2, 'HI', 'BYE', 'HOLA');
+```
+
+**How was this done pre-ES6?**
+
+```javascript
+const ifElse = (condition, isTrue, isFalse) => {
+  const args = [].slice.call(arguments,3) // take what is next the 03 first arguments
+  
+  return condition ? isTrue.apply(this, args) : isFalse.apply(this, args);
+};
+
+const logTrue = (msgs) => { console.log(msgs); };
+```
+
 ## Credits
 
 All credits goes for From Fundamentals to Functional JS, v2 front end master course
