@@ -252,7 +252,7 @@ add.example = 'testing 123!';
 
 ## 8.HIGHER-ORDER FUNCTIONS AND CALLBACKS
 
-- Higher order function in JavaScript is what enables us to do these functional programming techniques. Because a functtion in JavaScript is data. And that's not true in all languages that this function can be data. What we mean by saying function is data is that we can pass functions arround. We can return them without invoking them and things like that. Just like you would an object, or say some primitive value, like 0 or true. So, really higher order functions and callbacks are the core concept of functional programming.
+- Higher order function in JavaScript is what enables us to do these functional programming techniques. Because a function in JavaScript is data. And that's not true in all languages that this function can be data. What we mean by saying function is data is that we can pass functions arround. We can **return them without invoking them** and things like that. Just like you would an object, or say some primitive value, like 0 or true. So, really higher order functions and callbacks are the core concept of functional programming.
 
 1. Takes a function as an input (argument)
 
