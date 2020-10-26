@@ -408,6 +408,32 @@ blame('you');
 => 'I think it could be... YOU!'
 ```
 
+## Advanced Scope: Closure
+
+```javascript
+const myAlert = () => {
+  const x = "Help! I think I found a clue!";
+  const alerter = () => {
+    alert(x);
+  };
+  alerter();
+};
+
+alert();
+```
+
+```javascript
+const myAlert = () => {
+  const x = "Help! I think I found a clue!";
+  const alerter = (){
+    alert(x);
+  };
+
+  setTimeout(alerter, 1000) // this function will be excuted after 1000ms
+  console.log('what happens first? this log or the alert?') // THis console will be executed immediatly
+};
+```
+
 ## Credits
 
 All credits goes for From Fundamentals to Functional JS, v2 front end master course
