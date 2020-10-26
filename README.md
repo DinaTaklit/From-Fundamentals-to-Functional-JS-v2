@@ -460,6 +460,10 @@ funcAlert(); // count = 2
 funcAlert2 (); // count =1
 ```
 
+### Recipe
+
+![Closure Recipe](assets/img/9.Closure.recipe.png)
+
 ## Credits
 
 All credits goes for From Fundamentals to Functional JS, v2 front end master course
